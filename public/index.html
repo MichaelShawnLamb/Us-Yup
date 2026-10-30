@@ -1,1 +1,37 @@
-US YUP
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#6558e8"><title>Us Yup — Your people, your place</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="logo">◉</span> Us Yup</a><input id="search" class="search" placeholder="Find people by name or username" aria-label="Search people"><div class="top-user" id="topUser">Welcome</div></header>
+<main class="shell">
+  <aside class="sidebar card"><div class="nav active">⌂ <span>Home feed</span></div><div class="nav">♙ <span>My profile</span></div><div class="nav" id="messagesNav">✉ <span>Messages</span></div><div class="nav" id="peopleNav">♧ <span>People</span></div><div class="nav" id="groupsNav">◈ <span>Groups</span></div><div class="nav" id="storiesNav">◉ <span>Stories</span></div><div class="nav" id="notificationsNav">♢ <span>Notifications</span></div><div class="nav" id="liveNav">▷ <span>Live video</span></div><div class="sidebar-note"><b>Your corner of the internet.</b><p>Find your people, share what matters, and make something good together.</p></div><button id="logoutBtn" class="secondary hidden">Sign out</button></aside>
+  <section class="maincol">
+    <section id="authPanel" class="card auth-panel">
+      <div class="eyebrow">YOUR PEOPLE, YOUR PLACE</div><h1>Meet your circle.</h1><p class="muted">A little more connection, a little less noise.</p>
+      <div class="tabs"><button id="loginTab" class="tab active">Sign in</button><button id="registerTab" class="tab">Create account</button></div>
+      <form id="authForm">
+        <label id="nameLabel" class="hidden">Display name<input name="displayName" autocomplete="name" maxlength="60"></label>
+        <label id="usernameLabel" class="hidden">Username<input name="username" autocomplete="username" minlength="3" maxlength="24" placeholder="letters, numbers, underscores"></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required maxlength="254"></label>
+        <label>Password<input name="password" type="password" autocomplete="current-password" minlength="10" required maxlength="72"></label>
+        <button class="primary full" id="authSubmit">Sign in</button><p id="authMessage" class="message" role="status"></p>
+      </form>
+    </section>
+    <section id="appPanel" class="hidden">
+      <div class="page-title"><div><h1>Your feed</h1><p class="muted">Good things happen when we connect.</p></div><span class="online-dot">● Online</span></div>
+      <form id="composer" class="card composer"><div class="compose-head"><div class="avatar" id="myAvatar">Y</div><textarea id="postBody" rows="3" maxlength="2000" placeholder="What’s on your mind?"></textarea></div><div class="compose-foot"><label class="upload">▧ Photo or video<input id="mediaFile" type="file" accept="image/jpeg,image/png,image/gif,image/webp,video/mp4,video/webm,video/quicktime"></label><span id="fileName" class="muted small"></span><button class="primary" type="submit">Share post</button></div><p id="postMessage" class="message"></p></form>
+      <section class="card stories-panel"><div class="section-head"><div><h2>Stories & moments</h2><p class="muted small">Stories disappear after 24 hours.</p></div><button id="storyBtn" class="secondary">＋ Add story</button></div><div id="stories" class="stories-row"><span class="muted small">Loading stories…</span></div></section><div id="featurePanel" class="card feature-panel hidden"></div><div id="feed" class="feed"><div class="card empty">Loading your Us Yup feed…</div></div>
+    </section>
+  </section>
+  <aside class="rightcol">
+    <section class="card sidecard"><h2>People to discover</h2><p class="muted small">Find someone new to follow.</p><div id="people"><p class="muted small">Sign in to discover people.</p></div></section>
+    <section class="card sidecard trends"><h2>Community favorites</h2><div><small>CREATIVITY</small><b>#CreativeRoutine</b><span>Make something today.</span></div><div><small>EVERYDAY LIFE</small><b>#LittleWins</b><span>Celebrate the small stuff.</span></div><div><small>OUTDOORS</small><b>#WeekendWanders</b><span>Take the scenic route.</span></div></section>
+  </aside>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script src="/app.js" defer></script>
+</body></html>
